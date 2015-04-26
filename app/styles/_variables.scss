@@ -14,17 +14,12 @@ $wide: 1200px;
 
 
 //Add Color Palette
-$darkBlue      : #4670A3;
-$lightBlue     : #7FB2F0;
-$darkGreen     : #95A34E;
-$lightGreen    : #AABD51;
-$wewak         : #F2A199;
+$orange		   : #E28A10;
 $light         : #FFF;
 $dark          : #424242;
 
 $backgroundColor    : $light;
 $typeDefault        : $dark;
-$navBackground      : $lightBlue;
 $navForeground      : $light;
 
 
@@ -35,9 +30,9 @@ $seriffont       : "Droid Serif", "Georgia", "Times New Roman", "Palatino", seri
 $normal   : 400;
 $bold     : 700;
 
-$headFont   : $bold 1.5em/1.3em $sansfont;
+$headFont   : $bold 2.5em/1.3em $sansfont;
 $mainFont   : $normal 1em/1.5em $seriffont;
-$headColor  : $darkBlue;
+$headColor  : $orange;
 
 //Layout
 $mobilePadding : 5%;

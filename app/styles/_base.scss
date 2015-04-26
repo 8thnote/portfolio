@@ -6,8 +6,12 @@
 	@extend %visuallyhidden;
 }
 
-.container {
+%container {
 	@include container();
+}
+.container {
+	@extend %container;
+	padding: 0 $mobilePadding;
 }
 
 body {
@@ -16,4 +20,21 @@ body {
 
 h1, h2, h3, h4 {
 	font: $headFont;
+}
+
+.color1 {
+	color: $orange;
+}
+
+%blackShadow {
+	text-shadow: .05em .1em .1em rgba(0,0,0,0.5);
+}
+%whiteShadow {
+	text-shadow: .05em .1em .1em rgba(255,255,255,0.5);
+}
+.black-shadow {
+	@extend %blackShadow;
+}
+.white-shadow {
+	@extend %whiteShadow;
 }

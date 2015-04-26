@@ -1,8 +1,12 @@
 #top {
 	position: relative;
 	@extend %flex-center;
+	margin-bottom: 10em;
 	background: url('../images/top-background.jpg') 50% 50% no-repeat;
 	background-size: cover;
+	@include deviceBreakpoint(small) {
+		background-attachment: fixed;
+	}
 	color: $light;
 	//z-index: -2;
 
@@ -31,12 +35,22 @@ header {
 	z-index: 10;
 
 	h1 {
+		display: none;//might want to !improve this
+		@include deviceBreakpoint(small) {
+			display: block;
+		}
 		@include span(1 of 4);
 		margin: 0; padding: 0;
+		color: inherit;
+		font-size: 1.5em;
 		font-weight: $normal;
 		text-transform: lowercase;
 	}
 	ul {
+		display: none;//might want to !improve this
+		@include deviceBreakpoint(small) {
+			display: block;
+		}
 		@include span(3 of 4);
 		list-style-type: none;
 		margin: 0; padding: 0;
@@ -53,14 +67,17 @@ header {
 }//header
 
 #topContent {
-	@include container();
+	@extend %container;
+	padding: 0 $mobilePadding;
 	text-align: center;
 	z-index: 5;
 
 	h2 {
 		margin: 0 0 1em 0;
+		color: $light;
+		font-size: 1.3em;
 		font-weight: $normal;
-		text-shadow: .05em .1em .1em rgba(0,0,0,0.5);
+		@extend %blackShadow;
 		@include deviceBreakpoint(small) {
 			font-size: 2em;
 			span {
@@ -74,15 +91,47 @@ header {
 }//topContent
 
 #topPhoto {
+	position: relative;
 	width: 70%;
+	padding-bottom: 70%;
 	height: 0;
 	margin: 0 auto 1em auto;
-	padding-bottom: 70%;
-	background: url('../images/me-sprite.jpg') no-repeat;
+	background: url('../images/me-sprite.jpg') 50% 0 no-repeat;
 	background-size: cover;
 	border-radius: 50%;
+	overflow: hidden;
+	transition: .5s width, .5s padding;
 
 	@include deviceBreakpoint(small) {
+		width: 50%;
+		padding-bottom: 50%;
+
+		&:before, &:after {
+			content: " ";
+			position: absolute;
+			width: 100%;
+			top: 0; bottom: 0; left: 0;
+			background-image: url('../images/me-sprite.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+			opacity: 0;
+		}
+		&:before {
+			background-position: 50% 50%;
+			transition: 1s opacity;
+			transition-delay: .2s;
+		}
+		&:after {
+			background-position: 50% 100%;
+			transition: .3s opacity;
+			transition-delay: .1s;
+		}
+		&.hover:before, &.clicked:after {
+			opacity: 1;
+		}
+	}//small breakpoint
+	@include deviceBreakpoint(medium) {
 		width: 30%;
 		padding-bottom: 30%;
 	}
@@ -92,9 +141,16 @@ header {
 	display: inline-block;
 	position: relative;
 	padding: 1em;
+	@include deviceBreakpoint(small) {
+		padding-top: .8em;
+	}
 	border: 1px solid $light;
 	border-radius: 5px;
 	fill: currentColor;
+
+	@include deviceBreakpoint(small) {
+		font-size: 1.3em;
+	}
 
 	&:after {
 		content: " ";
@@ -117,7 +173,11 @@ header {
 		*/
 	}
 	.icon-circle-down {
-		width: 1.2em; height: 1.2em;
+		display: none;
+		@include deviceBreakpoint(small) {
+			display: inline-block;
+		}
+		width: 1.2em; height: 1.3em;
 		position: relative;
 		top: .3em;
 		margin-left: 1em;
