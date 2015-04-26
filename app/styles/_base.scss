@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+.outliner {
+	@extend %visuallyhidden;
+}
+
+.container {
+	@include container();
+}
+
+body {
+	font: $mainFont;
+}
+
+h1, h2, h3, h4 {
+	font: $headFont;
+}

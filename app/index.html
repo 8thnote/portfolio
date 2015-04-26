@@ -9,6 +9,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -25,10 +26,11 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="top">
+    <div id="top" class="fullheight">
         <header>
-          <h1><a href="#">Helm4Hire</a></h1>
-          <nav>
+          <div class="container">
+            <h1><a href="#">Helm4Hire</a></h1>
+            <nav>
                 <h2 class="outliner">Main Navigation</h2>
                 <ul>
                     <li><a href="#">about</a></li>
@@ -37,10 +39,11 @@
                     <li><a href="#">contact</a></li>
                 </ul>
             </nav>
+          </div><!-- container -->
         </header>
         <div id="topContent">
             <h2>Hi, I'm Don Helm,<br />
-                a designer &amp; front-end developer in Tulsa, OK</h2>
+                a designer &amp; front-end developer in Tulsa,&nbsp;OK</h2>
             <div id="topPhoto"></div>
             <a id="topCta" href="#">Let's Get to Know One Another</a>
         </div>
@@ -106,7 +109,7 @@
     <section id="contact">
         <h2 class="outliner">Contact</h2>
         <h3>Now I'd Like to Learn About You</h3>
-        <p>I'm currently available for hire...</p>
+        <p>BTW... I'm currently available for hire...</p>
 
         <form id="contact-form" action="/" method="post">
           <div>
