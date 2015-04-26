@@ -26,6 +26,16 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+    <symbol id="icon-circle-down" viewBox="0 0 1024 1024">
+      <title>circle-down</title>
+      <path class="path1" d="M1024 512c0-282.77-229.23-512-512-512s-512 229.23-512 512 229.23 512 512 512 512-229.23 512-512zM96 512c0-229.75 186.25-416 416-416s416 186.25 416 416-186.25 416-416 416-416-186.25-416-416z"></path>
+      <path class="path2" d="M317.256 354.744l-90.512 90.512 285.256 285.254 285.254-285.256-90.508-90.508-194.746 194.744z"></path>
+    </symbol>
+    </defs>
+    </svg>
+
     <div id="top" class="fullheight">
         <header>
           <div class="container">
@@ -34,7 +44,7 @@
                 <h2 class="outliner">Main Navigation</h2>
                 <ul>
                     <li><a href="#">about</a></li>
-                    <li><a href="#">project</a></li>
+                    <li><a href="#">projects</a></li>
                     <li><a href="#">blog</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
@@ -42,10 +52,10 @@
           </div><!-- container -->
         </header>
         <div id="topContent">
-            <h2>Hi, I'm Don Helm,<br />
+            <h2><span class="sm">Hi, I'm</span><span> Don Helm,</span><br />
                 a designer &amp; front-end developer in Tulsa,&nbsp;OK</h2>
             <div id="topPhoto"></div>
-            <a id="topCta" href="#">Let's Get to Know One Another</a>
+            <a id="topCta" href="#"><span>Let's Get to Know One Another</span> <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
         </div>
     </div><!-- top -->
 
