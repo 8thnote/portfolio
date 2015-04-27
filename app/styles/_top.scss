@@ -30,7 +30,9 @@ header {
 	padding: .5em 0;
 	position: fixed;
 	top: 0; left: 0;
-	background: rgba(0,0,0,0.2);
+	@include deviceBreakpoint(small) {
+		background: rgba(0,0,0,0.2);
+	}
 	color: darken($light, 10);
 	z-index: 10;
 
@@ -64,6 +66,48 @@ header {
 	#top & {
 		a:hover {color: $light;}
 	}
+
+	#nav-toggle {
+		@include deviceBreakpoint(small) {
+			display: none;
+		}
+		float: right;
+		cursor: pointer; padding: 10px 35px 16px 0px; 
+		
+		span, span:before, span:after {
+		  cursor: pointer;
+		  border-radius: 1px;
+		  height: 3px;
+		  width: 25px;
+		  background: white;
+		  position: absolute;
+		  display: block;
+		  content: '';
+		  transition: all 500ms ease-in-out;
+		}
+
+		span:before {
+		  top: -7px; 
+		}
+		span:after {
+		  bottom: -7px;
+		}
+
+		&.active {
+			span {
+				background-color: transparent;
+			}
+			span:before, span:after {
+				top: 0;
+			}
+			span:before {
+				transform: rotate(45deg);
+			}
+			span:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}//nav-toggle
 }//header
 
 #topContent {
@@ -92,8 +136,8 @@ header {
 
 #topPhoto {
 	position: relative;
-	width: 70%;
-	padding-bottom: 70%;
+	width: 60%;
+	padding-bottom: 60%;
 	height: 0;
 	margin: 0 auto 1em auto;
 	background: url('../images/me-sprite.jpg') 50% 0 no-repeat;
@@ -140,9 +184,9 @@ header {
 #topCta {
 	display: inline-block;
 	position: relative;
-	padding: 1em;
+	padding: .7em;
 	@include deviceBreakpoint(small) {
-		padding-top: .8em;
+		padding: .8em 1em 1em 1em;
 	}
 	border: 1px solid $light;
 	border-radius: 5px;

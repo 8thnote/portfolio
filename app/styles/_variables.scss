@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700%7CDroid+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700%7CDroid+Serif:400,700,400italic,700italic);
 
 $susy: (
   columns: 16,
@@ -24,13 +24,14 @@ $navForeground      : $light;
 
 
 //Font variables
-$sansfont       : 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sansfont       : 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $seriffont       : "Droid Serif", "Georgia", "Times New Roman", "Palatino", serif;;
 
-$normal   : 400;
+$lweight  : 300;
+$normal	  : 400;
 $bold     : 700;
 
-$headFont   : $bold 2.5em/1.3em $sansfont;
+$headFont   : $lweight 2.5em/1.3em $sansfont;
 $mainFont   : $normal 1em/1.5em $seriffont;
 $headColor  : $orange;
 
