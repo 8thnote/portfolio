@@ -49,6 +49,7 @@ $(document).ready(function() {
 	var myResizeDebounced = debounce(myResize, 250);
 	window.addEventListener('resize', myResizeDebounced);
 
+	//smooth scrolling on page
 	$('a[href^="#"]').on('click',
 		function (e) {
 	    e.preventDefault();
@@ -73,7 +74,32 @@ $(document).ready(function() {
 		}
 	});
 
-	//my photo
+	//mobile nav
+	var mobileNav = $("#mainNav").clone();
+	mobileNav.attr("id", "mobileNav");
+	var navToggle = $("#nav-toggle");
+	$("#mainWrap").prepend(mobileNav);
+	navToggle.click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass("active");
+		mobileNav.toggleClass("visible");
+	});
+	$("#mobileNav").on("click", "a", function(e) {
+		e.preventDefault();
+		navToggle.toggleClass("active");
+		mobileNav.toggleClass("visible");
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		});
+	});
+
+	//my photo (top)
 	$("#topCta").hover(function() {
 		$("#topPhoto").toggleClass("hover");
 	});

@@ -25,6 +25,53 @@
 	}
 }//top
 
+#mobileNav {
+	max-height: 1px;
+	width: 100%;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 6;
+	transition: .7s opacity ease-out, .7s max-height ease-out, .7s padding-top ease-out;
+
+	&.visible {
+		max-height: 20em;
+		opacity: 1;
+		padding-top: 2.4em;
+		background-color: $dark;
+	}
+
+	ul {
+		margin: 0; padding: 0;
+		list-style-type: none;
+	}
+
+	@include deviceBreakpoint(small) {
+		display: none;
+	}
+
+	li {
+		border-bottom: 1px solid lighten($dark, 20);
+	}
+	a {
+		display: block;
+		padding: .8em 0;
+		background: $dark;
+		color: $light;
+		font-family: $seriffont;
+		font-size: .9em;
+		text-align: center;
+		text-decoration: none;
+		&:hover {
+			background: darken($dark, 5);
+		}
+		&:active {
+			background: lighten($dark, 20);
+		}
+	}
+}
+
 header {
 	width: 100%;
 	padding: .5em 0;
@@ -45,7 +92,7 @@ header {
 		margin: 0; padding: 0;
 		color: inherit;
 		font-size: 1.5em;
-		font-weight: $normal;
+		font-weight: $lweight;
 		text-transform: lowercase;
 	}
 	ul {
