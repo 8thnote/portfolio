@@ -1,10 +1,10 @@
 #top {
 	position: relative;
 	@extend %flex-center;
-	margin-bottom: 10em;
 	background: url('../images/top-background.jpg') 50% 50% no-repeat;
 	background-size: cover;
 	@include deviceBreakpoint(small) {
+		margin-bottom: 10em;
 		background-attachment: fixed;
 	}
 	color: $light;
@@ -166,11 +166,11 @@ header {
 	h2 {
 		margin: 0 0 1em 0;
 		color: $light;
-		font-size: 1.3em;
+		font-size: 1.5em;
 		font-weight: $normal;
 		@extend %blackShadow;
 		@include deviceBreakpoint(small) {
-			font-size: 2em;
+			font-size: 1.8em;
 			span {
 				font-size: 1.8em;
 				&.sm {

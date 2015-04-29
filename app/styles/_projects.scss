@@ -1,0 +1,28 @@
+#projects {
+	article {
+		@extend %clearfix;
+		margin-top: 2em;
+	}
+	.img {
+		@include deviceBreakpoint(small) {
+			@include span(1 of 3);
+			padding: 0;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	.text {
+		@include deviceBreakpoint(small) {
+			@include span(2 of 3);
+		}
+	}
+	h3 {
+		color: lighten($dark, 10);
+		font-size: 1.5em;
+		font-weight: $bold;
+		@include deviceBreakpoint(small) {
+			margin-top: 0;
+		}
+	}
+}

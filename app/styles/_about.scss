@@ -1,16 +1,16 @@
 #about {
 	position: relative;
-	@extend %flex-center;
-	margin-bottom: 10em;
-	background: url('../images/on-mac.jpg') 50% 50% no-repeat;
-	background-size: cover;
 	@include deviceBreakpoint(small) {
+		margin-bottom: 10em;
+		background: url('../images/on-mac.jpg') 50% 50% no-repeat;
+		background-size: cover;
 		background-attachment: fixed;
 	}
-
+	
 	.narrow {
-		@include span(1 of 2);
-		margin-top: -20%;
-		padding: 0;
+		@include deviceBreakpoint(small) {
+			@include span(3 of 5);
+			padding: 3em 0 0 0;
+		}
 	}
 }

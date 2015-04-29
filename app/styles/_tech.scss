@@ -1,8 +1,10 @@
 #technology {
-	ul:first-child {
-		@include span(1 of 2);
-	}
-	ul.second {
-		@include span(1 of 2);
+	@include deviceBreakpoint(small) {
+		ul:first-child {
+			@include span(1 of 2);
+		}
+		ul.second {
+			@include span(1 of 2);
+		}
 	}
 }
