@@ -1,7 +1,7 @@
 #about {
 	position: relative;
 	@include deviceBreakpoint(small) {
-		margin-bottom: 10em;
+		margin-bottom: 4em;
 		background: url('../images/on-mac.jpg') 50% 50% no-repeat;
 		background-size: cover;
 		background-attachment: fixed;

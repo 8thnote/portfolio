@@ -2,6 +2,17 @@
 	box-sizing: border-box;
 }
 
+@include deviceBreakpoint(mobile) {
+	#mainWrap .desktop {
+		display: none;
+	}
+}
+@include deviceBreakpoint(small) {
+	#mainWrap .mobile {
+		display: none;
+	}
+}
+
 .outliner {
 	@extend %visuallyhidden;
 }
@@ -11,15 +22,20 @@
 }
 .container {
 	@extend %container;
-	padding: 0 $mobilePadding;
+	padding: 1em $mobilePadding 0 $mobilePadding;
+	@include deviceBreakpoint(small) {
+		padding-top: 3em;
+	}
 }
+
+.center {text-align: center;}
 
 body {
 	font: $mainFont;
 }
 
 h1, h2, h3, h4 {
-	margin-bottom: .5em;
+	margin: .5em 0;
 	font: $headFont;
 }
 h2 {
@@ -41,4 +57,68 @@ h2 {
 }
 .white-shadow {
 	@extend %whiteShadow;
+}
+
+.mainBtn {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	padding: .7em;
+	border: 1px solid $light;
+	border-radius: 5px;
+	color: lighten($dark, 10);
+	fill: currentColor;
+	font-family: $sansfont;
+	font-weight: $bold;
+	text-decoration: none;
+
+	@include deviceBreakpoint(small) {
+		display: inline-block;
+		padding: .8em;
+		font-size: 1em;
+		border-color: darken($light, 10);
+	}
+
+	&:after {
+		content: " ";
+		width: 100%;
+		position: absolute;
+		top: 0; left: 0; bottom: 0;
+		background: linear-gradient(to bottom, rgba($light,0.3), transparent);
+		opacity: .5;
+		transition: .5s opacity;
+	}
+
+	&:hover:after {
+		opacity: 1;
+	}
+	span {
+		transition: .5s color;
+		/* couldn't get this to work without snapping back to starting position
+		-webkit-animation-fill-mode: both;
+		transition: .5s transform;
+		*/
+	}
+	.icon {
+		width: 1.2em; height: 1.3em;
+		position: relative;
+		top: .22em;
+		margin-left: 1em;
+		transition: .5s fill;
+		
+		&.icon-open {
+			width: .9em; height: 1em;
+			fill: lighten($dark, 20);
+			top: .15em;
+		}
+	}
+	&:hover {
+		span {
+			color: $orange;
+			//transform: translateY(-.2em);//couldn't get this to work - see above
+		}
+		.icon {
+			fill: $orange;
+		}
+	}
 }

@@ -10,6 +10,9 @@
 		}
 		img {
 			max-width: 100%;
+			border: 3px solid #fff;
+			border-radius: 3px;
+			box-shadow: 1px 2px 1px rgba(0,0,0,0.3);
 		}
 	}
 	.text {
@@ -18,11 +21,16 @@
 		}
 	}
 	h3 {
-		color: lighten($dark, 10);
-		font-size: 1.5em;
+		color: $blue;
+		font-size: 1.3em;
 		font-weight: $bold;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 		@include deviceBreakpoint(small) {
 			margin-top: 0;
 		}
+	}
+	p.wrap {
+		color: lighten($dark, 20);
+		font-family: $sansfont;
 	}
 }

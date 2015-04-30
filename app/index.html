@@ -28,11 +28,15 @@
 
     <svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-    <symbol id="icon-circle-down" viewBox="0 0 1024 1024">
-      <title>circle-down</title>
-      <path class="path1" d="M1024 512c0-282.77-229.23-512-512-512s-512 229.23-512 512 229.23 512 512 512 512-229.23 512-512zM96 512c0-229.75 186.25-416 416-416s416 186.25 416 416-186.25 416-416 416-416-186.25-416-416z"></path>
-      <path class="path2" d="M317.256 354.744l-90.512 90.512 285.256 285.254 285.254-285.256-90.508-90.508-194.746 194.744z"></path>
-    </symbol>
+      <symbol id="icon-circle-down" viewBox="0 0 1024 1024">
+        <title>circle-down</title>
+        <path class="path1" d="M1024 512c0-282.77-229.23-512-512-512s-512 229.23-512 512 229.23 512 512 512 512-229.23 512-512zM96 512c0-229.75 186.25-416 416-416s416 186.25 416 416-186.25 416-416 416-416-186.25-416-416z"></path>
+        <path class="path2" d="M317.256 354.744l-90.512 90.512 285.256 285.254 285.254-285.256-90.508-90.508-194.746 194.744z"></path>
+      </symbol>
+      <symbol id="icon-open" viewBox="0 0 1024 1024">
+        <title>open</title>
+        <path class="path1" d="M170.667 42.667h298.667q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-298.667q-17.667 0-30.167 12.5t-12.5 30.167v682.667q0 17.667 12.5 30.167t30.167 12.5h682.667q17.667 0 30.167-12.5t12.5-30.167v-298.667q0-17.667 12.5-30.167t30.167-12.5 30.167 12.5 12.5 30.167v298.667q0 53-37.5 90.5t-90.5 37.5h-682.667q-53 0-90.5-37.5t-37.5-90.5v-682.667q0-53 37.5-90.5t90.5-37.5zM682.667 42.667h256q17.667 0 30.167 12.5t12.5 30.167v256q0 17.667-12.5 30.167t-30.167 12.5-30.167-12.5-12.5-30.167v-153l-354 354q-12.333 12.333-30 12.333-18.333 0-30.5-12.167t-12.167-30.5q0-17.667 12.333-30l354-354h-153q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"></path>
+      </symbol>
     </defs>
     </svg>
 
@@ -58,7 +62,7 @@
               <h2><span class="sm">Hi, I'm</span><span> Don Helm,</span><br />
                   a designer &amp; front-end developer in Tulsa,&nbsp;OK</h2>
               <div id="topPhoto"></div>
-              <a id="topCta" href="#about"><span>Let's Get to Know One Another</span> <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+              <a id="topCta" class="mainBtn" href="#about"><span>Let's Get to Know One Another</span> <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
           </div>
       </div><!-- top -->
       
@@ -70,6 +74,7 @@
               My journey in web development began a little over ten years ago when I fell hard and fast in love with creating websites. Well, not exactly fast by many people's standards. It's actually only been within the last year or two that I've developed an intense desire to become an expert in the field. Before that I considered myself more of a multimedia generalist doing a lot of graphic design and video production in addition to web. I've had the privilege of leading many teams on a wide range of projects, mostly websites, while working full-time at Central Technology Center over these last seven years. But then I met Sass, Gulp and Angular, and my love for development sky rocketed!</p>
             <p>
               Outside of work I have a beautiful wife and two cute, awnry kids. When I'm not working on web projects or spending time with my family, I like to go water skiing in the summer and snowboarding in the winter.</p>
+            <a href="#technology" class="mainBtn desktop"><span>Tech I Use</span> <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
           </div><!-- narrow -->
         </div><!-- container -->
       </section><!-- about -->
@@ -125,9 +130,9 @@
               </div>
               <div class="text">
                   <h3>Mike Yeager - Pro Angler</h3>
-                  <p>Mike came to me in need of a new website to help him get some new sponsors for his upcoming fishing season. We wanted to create a site that would show him off... I created a custom responsive site that he can easily make changes to directly in his browser.
-                      <a class="site" href="#">Visit Site</a>
+                  <p>Mike Yeager, a pro fisherman living in Tulsa, came to me in need of a new website to help him attract some new sponsors for his upcoming fishing season. We wanted to create a site that would make a big impression, but in a clear and straightforward way. I worked with him to design and develop a custom responsive site that he can easily make changes to directly in his browser.
                   </p>
+                  <p class="wrap"><a class="site mainBtn" href="#"><span>See the Site</span> <svg class="icon icon-open"><use xlink:href="#icon-open"></use></svg></a></p>
               </div>
           </article>
           <article>
@@ -136,9 +141,9 @@
               </div>
               <div class="text">
                   <h3>The Ministry Center</h3>
-                  <p>Some info about The Ministry Center site...
-                      <a class="site" href="#">Visit Site</a>
+                  <p>The Ministry Center provides impoverished Tulsa residents with free food and clothing. I was honored to be able to help their ministry with a fresh redesign of their website. It's a custom responsive site with a user friendly admin for them to make basic changes. The design is a big improvement over their previous site and now has a look and feel that they believe accurately reflects the heart of their ministry.
                   </p>
+                  <p class="wrap"><a class="site mainBtn" href="#"><span>See the Site</span> <svg class="icon icon-open"><use xlink:href="#icon-open"></use></svg></a></p>
               </div>
           </article>
           <article>
@@ -146,10 +151,10 @@
                   <img src="images/portfolio.jpg" alt="My Portfolio" />
               </div>
               <div class="text">
-                  <h3>This Site</h3>
-                  <p>Info about my portfolio...
-                      <a class="site" href="#">Visit Site</a>
+                  <h3>My Portfolio</h3>
+                  <p>I designed and developed my portfolio from scratch using a similar workflow as my other projects. It too is responsive and uses Jekyll on the backend to simplify updating the content.
                   </p>
+                  <p class="wrap"><b>You're on the site</b></p>
               </div>
           </article>
       </section><!-- projects -->
