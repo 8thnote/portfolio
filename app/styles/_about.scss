@@ -6,11 +6,20 @@
 		background-size: cover;
 		background-attachment: fixed;
 	}
+
+	.container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
 	
 	.narrow {
 		@include deviceBreakpoint(small) {
 			@include span(3 of 5);
-			padding: 3em 0 0 0;
+			padding: 0;
+			position: relative;
+			top: -10%;
 		}
 	}
+	
 }

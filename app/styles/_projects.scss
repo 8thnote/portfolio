@@ -33,4 +33,7 @@
 		color: lighten($dark, 20);
 		font-family: $sansfont;
 	}
+	.mainBtn {
+		border-color: $light;
+	}
 }

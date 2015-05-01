@@ -86,16 +86,30 @@ header {
 	.container {padding-top: 0;}
 
 	h1 {
+		/*
 		display: none;//might want to !improve this
 		@include deviceBreakpoint(small) {
 			display: block;
 		}
+		*/
+		position: relative;
 		@include span(1 of 4);
 		margin: 0; padding: 0;
 		color: inherit;
-		font-size: 1.5em;
+		font-size: 1px;
 		font-weight: $lweight;
 		text-transform: lowercase;
+
+		img {
+			width: 100%;
+			@include deviceBreakpoint(small) {
+				width: 50%;
+				position: absolute;
+				top: -5em;
+			}
+		}
+
+		span {opacity: 0;}
 	}
 	ul {
 		display: none;//might want to !improve this
