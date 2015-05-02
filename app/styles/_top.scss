@@ -74,7 +74,7 @@
 
 header {
 	width: 100%;
-	padding: .5em 0;
+	padding: .5em 0 .3em 0;
 	position: fixed;
 	top: 0; left: 0;
 	@include deviceBreakpoint(small) {
@@ -85,21 +85,34 @@ header {
 
 	.container {padding-top: 0;}
 
+	#top & {
+		a {
+			color: darken($light, 10);
+			opacity: .7;
+			transition: .5s opacity;
+			
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
 	h1 {
-		/*
+		
 		display: none;//might want to !improve this
 		@include deviceBreakpoint(small) {
 			display: block;
 		}
-		*/
+		
 		position: relative;
 		@include span(1 of 4);
 		margin: 0; padding: 0;
 		color: inherit;
-		font-size: 1px;
+		font-size: 1.4em;
 		font-weight: $lweight;
 		text-transform: lowercase;
-
+		
+		/*
 		img {
 			width: 100%;
 			@include deviceBreakpoint(small) {
@@ -108,8 +121,7 @@ header {
 				top: -8em;
 			}
 		}
-
-		span {opacity: 0;}
+		*/
 	}
 	ul {
 		display: none;//might want to !improve this
@@ -125,9 +137,6 @@ header {
 		display: inline-block;
 		margin-left: 2em;
 		line-height: 2;
-	}
-	#top & {
-		a:hover {color: $light;}
 	}
 
 	#nav-toggle {

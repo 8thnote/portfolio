@@ -2,6 +2,9 @@
 	article {
 		@extend %clearfix;
 		margin-top: 2em;
+		@include deviceBreakpoint(small) {
+			min-height: 13em;
+		}
 	}
 	.img {
 		@include deviceBreakpoint(small) {
