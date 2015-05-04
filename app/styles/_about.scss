@@ -15,10 +15,18 @@
 	
 	.narrow {
 		@include deviceBreakpoint(small) {
-			@include span(5 of 8);
+			@include span(7 of 8);
 			padding: 0;
 			position: relative;
 			top: -10%;
+		}
+		@include deviceBreakpoint(medium) {
+			@include span(3 of 4);
+			padding: 0;
+		}
+		@include deviceBreakpoint(large) {
+			@include span(5 of 8);
+			padding: 0;
 		}
 	}
 	

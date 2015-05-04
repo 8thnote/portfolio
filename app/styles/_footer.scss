@@ -1,7 +1,7 @@
 footer {
 	margin-top: 3em;
 	padding: 2em 0;
-	background: darken($dark, 10) url("../images/diff-circles.png");
+	background: $dark url("../images/swirl.png");
 	color: darken($light, 20);
 	border-top: 5px solid darken($creamy, 30);
 	text-align: center;
