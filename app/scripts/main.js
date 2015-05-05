@@ -19,6 +19,7 @@
  * @mixin animation.GSAP
  */
 (function (root, factory) {
+	"use strict";
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['ScrollMagic', 'TweenMax', 'TimelineMax'], factory);
@@ -129,7 +130,7 @@
                     } else if (state !== 'DURING' && !_tween.paused()) {
                         _tween.pause();
                     }
-                } else if (progress != _tween.progress()) { // do we even need to update the progress?
+                } else if (progress !== _tween.progress()) { // do we even need to update the progress?
                     // no infinite loop - so should we just play or go to a specific point in time?
                     if (Scene.duration() === 0) {
                         // play the animation
@@ -316,14 +317,14 @@ $(document).ready(function() {
 				args = arguments;
 			var later = function() {
 				timeout = null;
-				if (!immediate) func.apply(context, args);
+				if (!immediate) {func.apply(context, args);}
 			};
 			var callNow = immediate && !timeout;
 			clearTimeout(timeout);
 			timeout = setTimeout(later, wait);
-			if (callNow) func.apply(context, args);
+			if (callNow) {func.apply(context, args);}
 		};
-	}; //debounce fn
+	} //debounce fn
  
     var initialized = false;
     var myScene;
@@ -358,7 +359,7 @@ $(document).ready(function() {
 	//change header background
 	if (!Modernizr.touch) {
 		var controller = new ScrollMagic.Controller();
-		var myScene = new ScrollMagic.Scene({
+		myScene = new ScrollMagic.Scene({
 			triggerElement: "#topCta"
 		})
 		.setTween("header", 0.5, {backgroundColor: "rgba(0,0,0,0.5)"}) // trigger a TweenMax.to tween
@@ -381,7 +382,7 @@ $(document).ready(function() {
 		    });
 		};
 
-		if ($(this).attr("id") == "topCta") {
+		if ($(this).attr("id") === "topCta") {
 			setTimeout(function(){
 				myScrollAnimation();
 			}, 300);
