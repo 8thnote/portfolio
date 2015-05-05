@@ -85,9 +85,9 @@
           <div class="narrow">
             <h2 class="white-shadow">A Little About Me</h2>
             <p>
-              My journey in web development began a little over ten years ago when I fell hard and fast in love with creating websites. Well, not exactly fast by many people's standards. It's actually only been within the last year or two that I've developed an intense desire to become an expert in the field. Before that I considered myself more of a multimedia generalist doing a lot of graphic design and video production in addition to web. I've had the privilege of leading many teams on a wide range of projects, mostly websites, while working full-time at Central Technology Center over these last seven years. But then I met Sass, Gulp and Angular, and my love for development sky rocketed!</p>
+              I've been developing websites for over ten years now, but it's only been within the last one to two that I've developed an intense desire to become an expert in the field <em>(I even read the W3C specs)</em>. Before that I considered myself more of a multimedia generalist doing a lot of graphic design and video production in addition to web. I have been <em>(and still am)</em> privileged to call Central Technology Center my home away from home these last seven years; that's where I gained most of my experience leading teams on a wide range of projects <em>(largely websites)</em>. But then I met Sass, Gulp and Angular, and my love for development sky rocketed!</p>
             <p>
-              Outside of work I have a beautiful wife and two cute, awnry kids. When I'm not working on web projects or spending time with my family, I like to go water skiing in the summer and snowboarding in the winter.</p>
+              Outside of work I have a beautiful wife and two cute, awnry kids. When I'm not working on web projects or spending time with my family, I like to go water skiing in the summer and snowboarding in the winter. I'm also a musician and an OKC Thunder fan. <em>You can't beat Durant and Westbrook!</em></p>
             <a href="#technology" class="mainBtn desktop"><span>See the Tech I Use</span> <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
           </div><!-- narrow -->
         </div><!-- container -->
@@ -95,11 +95,11 @@
       
       <section id="technology" class="container">
           <h2>Technology &amp; Skills</h2>
-          <p>Here's a list of a lot of the things I've learned in web design and development over the years. See my resume for a snapshot of my job experience.</p>
+          <p>Here's a list of a lot of the things I've learned in web design and development over the years. See my <a href="don-helm-frontend-web-developer.pdf">resume</a> for a snapshot of my job experience.</p>
           <div class="clearfix">
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>HTML 5</li>
+                <li>CSS 3</li>
                 <li>jQuery</li>
                 <li>Sass/Compass</li>
                 <li>JS/CoffeeScript</li>
@@ -166,7 +166,7 @@
               </div>
               <div class="text">
                   <h3>My New Portfolio</h3>
-                  <p>I designed and developed my portfolio from scratch using a similar workflow as my other projects. It too is responsive and uses Jekyll on the backend to simplify updating the content.
+                  <p>I designed and developed my portfolio from scratch using a similar workflow as my other projects. It too is responsive, but uses Jekyll on the backend to simplify updating the content.
                   </p>
                   <p class="wrap"><b>You're on the site</b></p>
               </div>
@@ -189,38 +189,41 @@
           <h3>What's Your Story?</h3>
           <p>I'd love to hear from you!</p>
       
-          <form id="contact-form" action="/" method="post">
+          <form id="contact-form" accept-charset="UTF-8" action="http://formspree.io/helmwebdesigns@gmail.com" method="POST">
             <div>
               <label>
                 <span>Name: <span class="sm">(required)</span></span>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                <input placeholder="Your name" type="text" name="name" tabindex="1" required autofocus>
               </label>
             </div>
             <div>
               <label>
                 <span>Email: <span class="sm">(required)</span></span>
-                <input placeholder="Your email" type="email" tabindex="2" required>
+                <input placeholder="Your email" type="email" name="email" tabindex="2" required>
               </label>
             </div>
             <div>
               <label>
                 <span>Telephone:</span>
-                <input placeholder="Your phone number" type="tel" tabindex="3">
+                <input placeholder="Your phone number" type="tel" name="telephone" tabindex="3">
               </label>
             </div>
             <div>
               <label>
                 <span>Website:</span>
-                <input placeholder="Your website" type="url" tabindex="4">
+                <input placeholder="Your website with http://" type="url" name="website" tabindex="4">
               </label>
             </div>
             <div>
               <label>
                 <span>Message: <span class="sm">(required)</span></span>
-                <textarea placeholder="Your message/story" tabindex="5" required></textarea>
+                <textarea placeholder="Your message/story" name="message" tabindex="5" required></textarea>
               </label>
             </div>
             <div>
+              <input type="text" name="_gotcha" style="display:none">
+              <input type="hidden" name="_next" value="/">
+              <input type="hidden" name="_subject" value="Hello from Helm Designs">
               <button name="submit" type="submit" id="contact-submit" data-text="...Sending">Send Email</button>
             </div>
           </form>
@@ -228,9 +231,9 @@
       <footer>
         <div class="container">
           <ul>
-            <li><a href="#"><svg class="icon icon-github3"><use xlink:href="#icon-github3"></use></svg></a></li>
-            <li><a href="#"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
-            <li><a href="#"><svg class="icon icon-linkedin2"><use xlink:href="#icon-linkedin2"></use></svg></a></li>
+            <li><a href="https://github.com/8thnote"><svg class="icon icon-github3"><use xlink:href="#icon-github3"></use></svg></a></li>
+            <li><a href="https://twitter.com/8thnotemedia"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
+            <li><a href="www.linkedin.com/in/donhelm"><svg class="icon icon-linkedin2"><use xlink:href="#icon-linkedin2"></use></svg></a></li>
           </ul>
           <p>@2015 Helm Designs<span>.</span> <br />All rights reserved<span>.</span></p>
           <p>I designed and developed this site from scratch :)</p>

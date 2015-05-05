@@ -2,11 +2,13 @@
 	position: relative;
 	@include deviceBreakpoint(small) {
 		margin-bottom: 4em;
-		background: url('../images/on-mac.jpg') 50% 50% no-repeat;
+		background: url('../images/on-mac.jpg') 55% 50% no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 	}
-
+	@include deviceBreakpoint(medium) {
+		background-position: 50% 50%;
+	}
 	.container {
 		height: 100%;
 		display: flex;
@@ -15,14 +17,16 @@
 	
 	.narrow {
 		@include deviceBreakpoint(small) {
-			@include span(7 of 8);
-			padding: 0;
-			position: relative;
-			top: -10%;
-		}
-		@include deviceBreakpoint(medium) {
 			@include span(3 of 4);
 			padding: 0;
+			position: relative;
+			top: -5%;
+			font-size: .9em;
+			text-shadow: 1px 1px 1px rgba(255,255,255,.8);
+		}
+		@include deviceBreakpoint(medium) {
+			font-size: 1em;
+			text-shadow: none;
 		}
 		@include deviceBreakpoint(large) {
 			@include span(5 of 8);

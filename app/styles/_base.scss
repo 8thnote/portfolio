@@ -43,6 +43,11 @@ h2 {
 	color: $orange;
 }
 
+a, a:visited {color: $dark; transition: .3s color;
+	&:hover {color: darken($orange, 10);}
+	&:active {color: $orange;}
+}
+
 .color1 {
 	color: $orange;
 }
