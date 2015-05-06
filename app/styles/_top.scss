@@ -1,9 +1,10 @@
 #top {
 	position: relative;
 	@extend %flex-center;
-	background: url('../images/top-background.jpg') 50% 50% no-repeat;
+	background: url('../images/top-background-mobile.jpg') 50% 50% no-repeat;
 	background-size: cover;
 	@include deviceBreakpoint(small) {
+		background: url('../images/top-background.jpg') 50% 50% no-repeat;
 		margin-bottom: 10em;
 		background-attachment: fixed;
 	}
