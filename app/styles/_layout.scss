@@ -9,3 +9,9 @@ p.wrap {
 		text-align: left;
 	}
 }
+
+@media (min-width: 92em) {
+  body {
+    font-size: 1.2em;
+  }
+}
