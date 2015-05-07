@@ -366,7 +366,7 @@ $(document).ready(function() {
                 myScene = new ScrollMagic.Scene({
                     triggerElement: "#topCta"
                 })
-                .setTween("header", 0.5, {backgroundColor: "rgba(0,0,0,0.5)"}) // trigger a TweenMax.to tween
+                .setClassToggle("#top", "scrolled") // trigger a TweenMax.to tween
                 .addTo(controller);
             }
         });
