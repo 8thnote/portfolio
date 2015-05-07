@@ -308,6 +308,8 @@
     });
 }));
 
+
+//@myscripts
 $(document).ready(function() {
 	"use strict";
 	function debounce(func, wait, immediate) {
@@ -357,14 +359,30 @@ $(document).ready(function() {
 	window.addEventListener('resize', myResizeDebounced);
 
 	//change header background
+    if (!Modernizr.touch) {
+        $(window).one('scroll', function() {
+            if ($(this).scrollTop() > 0) {
+                var controller = new ScrollMagic.Controller();
+                myScene = new ScrollMagic.Scene({
+                    triggerElement: "#topCta"
+                })
+                .setTween("header", 0.5, {backgroundColor: "rgba(0,0,0,0.5)"}) // trigger a TweenMax.to tween
+                .addTo(controller);
+            }
+        });
+    }
+    /*
 	if (!Modernizr.touch) {
 		var controller = new ScrollMagic.Controller();
+        $(window).scroll(function() {
 		myScene = new ScrollMagic.Scene({
 			triggerElement: "#topCta"
 		})
 		.setTween("header", 0.5, {backgroundColor: "rgba(0,0,0,0.5)"}) // trigger a TweenMax.to tween
 		.addTo(controller);
+        });
 	}//change header on scroll
+    */
 
 	//smooth scrolling on page
 	$('a[href^="#"]').on('click',
