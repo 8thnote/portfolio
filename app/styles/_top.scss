@@ -85,13 +85,13 @@ header {
 
 	#top & {
 		a {
-			color: darken($light, 10);
-			opacity: .7;
-			transition: .5s opacity;
+			position: relative;
+			color: darken($light, 20);
 			
 			&:hover {
-				opacity: 1;
+				color: $light;
 			}
+
 		}
 	}
 
@@ -211,7 +211,7 @@ header {
 		color: $light;
 		font-size: 1.5em;
 		font-weight: $normal;
-		@extend %blackShadow;
+		@extend %darkShadow;
 		@include deviceBreakpoint(small) {
 			font-size: 1.8em;
 			span {

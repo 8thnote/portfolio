@@ -39,11 +39,17 @@ h1, h2, h3, h4 {
 	margin: .5em 0;
 	font: $headFont;
 }
+
 h2 {
 	color: $orange;
+	@include deviceBreakpoint(medium) {
+		font-size: 3em;
+	}
 }
 
-a, a:visited {color: $dark; transition: .3s color;
+a {
+	color: $dark; transition: .3s color;
+	&:visited {color: $dark;}
 	&:hover {color: darken($orange, 10);}
 	&:active {color: $orange;}
 }
@@ -52,17 +58,17 @@ a, a:visited {color: $dark; transition: .3s color;
 	color: $orange;
 }
 
-%blackShadow {
+%darkShadow {
 	text-shadow: .05em .1em .1em rgba(0,0,0,0.5);
 }
-%whiteShadow {
+%lightShadow {
 	text-shadow: .05em .1em .1em rgba(255,255,255,0.5);
 }
-.black-shadow {
-	@extend %blackShadow;
+.dark-shadow {
+	@extend %darkShadow;
 }
-.white-shadow {
-	@extend %whiteShadow;
+.light-shadow {
+	@extend %lightShadow;
 }
 
 .mainBtn {
@@ -77,6 +83,7 @@ a, a:visited {color: $dark; transition: .3s color;
 	font-family: $sansfont;
 	font-weight: $bold;
 	text-decoration: none;
+	transition: none;
 
 	@include deviceBreakpoint(small) {
 		display: inline-block;
@@ -121,7 +128,6 @@ a, a:visited {color: $dark; transition: .3s color;
 	&:hover {
 		span {
 			color: $orange;
-			//transform: translateY(-.2em);//couldn't get this to work - see above
 		}
 		.icon {
 			fill: $orange;
