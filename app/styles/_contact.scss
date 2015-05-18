@@ -32,7 +32,10 @@
 	text-shadow:0 1px 0 #FFF;
 	border-radius:4px;
 	background: lighten($creamy, 7);
-	padding:25px;
+	padding: 1em;
+	@include deviceBreakpoint(small) {
+		padding: 1.5em;
+	}
 }
 #contact-form label > span {
 	cursor:pointer;
