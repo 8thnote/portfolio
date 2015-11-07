@@ -1,10 +1,14 @@
 #technology {
 	@include deviceBreakpoint(small) {
-		ul:first-child {
+		.group {
 			@include span(1 of 2);
 		}
-		ul.second {
-			@include span(1 of 2);
-		}
+	}
+
+	h3 {margin-bottom: .3em;}
+	ul {
+		list-style-position: inside;
+		margin: 0 0 2em 0;
+		padding: 0 0 0 0.5em;
 	}
 }
