@@ -1,24 +1,30 @@
 #top {
 	position: relative;
+
 	@extend %flex-center;
 	background: url('../images/top-background-mobile.jpg') 50% 50% no-repeat;
 	background-size: cover;
+
+	@include deviceBreakpoint(mobile) {
+		padding-top: 2em;
+	}
+
 	@include deviceBreakpoint(small) {
 		background: url('../images/top-background.jpg') 50% 50% no-repeat;
 		margin-bottom: 10em;
 		background-attachment: fixed;
+
+		&:after {
+			content: " ";
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			background: rgba(0,0,0, 0.5) url('../images/cream-pixels.png') top left repeat;
+			opacity: .5;
+			z-index: 1;
+		}
 	}
 	color: $light;
 	//z-index: -2;
-
-	&:after {
-		content: " ";
-		position: absolute;
-		top: 0; right: 0; bottom: 0; left: 0;
-		background: rgba(0,0,0, 0.5) url('../images/cream-pixels.png') top left repeat;
-		opacity: .5;
-		z-index: 1;
-	}
 
 	a {
 		color: inherit;
@@ -287,6 +293,12 @@ header {
 			display: inline-block;
 		}
 	}
+
+	
+		span {
+			text-shadow: .1em .1em .2em #000;//todo:change to var
+		}
+	
 
 	&:hover {
 		span {
