@@ -94,7 +94,7 @@ header {
 			position: relative;
 			color: darken($light, 20);
 			
-			&:hover {
+			&:hover, &.active {
 				color: $light;
 			}
 
@@ -190,6 +190,9 @@ header {
 		}
 
 		&.active {
+			span, span:before, span:after {
+				box-shadow: none;
+			}
 			span {
 				background-color: transparent;
 			}
@@ -208,9 +211,23 @@ header {
 
 #topContent {
 	@extend %container;
+	margin-top: -1.7em;
 	padding: 0 $mobilePadding;
 	text-align: center;
 	z-index: 5;
+	opacity: 1;
+	transform: translateY(0);
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+
+	@include deviceBreakpoint(small) {
+		margin-top: 0;
+	}
+
+	&.cloak {
+		opacity: 0;
+		transform: translateY(50px);
+	}
 
 	h2 {
 		margin: 0 0 1em 0;

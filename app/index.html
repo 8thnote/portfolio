@@ -5,7 +5,7 @@
     <meta name="description" content="The web design and development portfolio of Don Helm, aka 8thnote">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Helm Designs - The portfolio of designer and front-end developer, Don Helm</title>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -26,12 +26,6 @@
     <meta name="msapplication-TileColor" content="#e28a10">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- build:css({.tmp, app}) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
 
     <!-- build:css({.tmp, app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -92,7 +86,7 @@
               <a id="nav-toggle"><span></span></a>
             </div><!-- container -->
           </header>
-          <div id="topContent">
+          <div id="topContent" class="cloak">
               <h2><span class="sm">Hi, I'm</span><span> Don Helm</span>,<br />
                   a front-end developer in West Palm Beach,&nbsp;Florida</h2>
               <div id="topPhoto"></div>
@@ -105,9 +99,9 @@
           <div class="narrow">
             <h2>A Little About Me</h2>
             <p>
-              I've been developing websites for about ten years now and am currently a front-end developer at Bankrate.com. Although I started out as a designer, my entrepreneurial spirit quickly lead me to developing complete websites for a number of different businesses and organizations. I love staying up on the latest web technologies, learning about different industries and using that knowledge to create a better online experience for everyone.</p>
+              I've been developing websites for a little over ten years now. Although I started out as a designer, my entrepreneurial spirit quickly lead me to developing complete websites for a number of different businesses and organizations. Most recently I've worked as a full-time front-end developer for Bankrate, Inc. and CircleBack Lending, Inc. I love staying up on the latest web technologies, learning about different industries and using that knowledge to create a better online experience for everyone.</p>
             <p>
-              Outside of work I have a beautiful wife and two cute, awnry kids. When I'm not working on web projects or spending time with my family, I like to go water skiing in the summer and snowboarding in the winter. I'm also a musician and an OKC Thunder fan. <em>You can't beat Durant and Westbrook!</em></p>
+              Outside of work I have a beautiful wife and two cute, awnry kids. When I'm not spending time with my family or learning the latest framework/development technique, I like to kick back with a good book or play a video game. I'm also a musician and I run sound for my church's praise band.</p>
             <a href="#technology" class="mainBtn desktop"><span>See the Tech I Use</span> <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
           </div><!-- narrow -->
         </div><!-- container -->
@@ -115,7 +109,7 @@
       
       <section id="technology" class="container">
           <h2>Technology & Skills</h2>
-          <p>Here's a list of a lot of the things I've learned in web design and development over the years. See my <a href="don-helm-frontend-web-developer.pdf">resume</a> for a snapshot of my job experience.</p>
+          <p>Here's a list of some things I've learned in web design and development over the years. See my <a href="don-helm-frontend-web-developer.pdf">resume</a> for a snapshot of my job experience.</p>
           <div class="clearfix">
 
             <div class="group">
@@ -123,23 +117,21 @@
               <h3>Languages</h3>
               <ul>
                 <li>HTML, CSS, and Javascript (of course)</li>
-                <li>Sass and Coffeescript</li>
+                <li>Sass and Less</li>
                 <li>XML, XSLT and XPath</li>
                 <li>PHP and SQL</li>
               </ul>
 
-              <h3>Frameworks</h3>
+              <h3>Frameworks & Libraries</h3>
               <ul>
                 <li>Angular</li>
                 <li>Ionic</li>
+                <li>Vue.js</li>
                 <li>jQuery</li>
                 <li>React</li>
                 <li>Meteor</li>
                 <li>Bootstrap</li>
-              </ul>
-
-              <h3>Libraries</h3>
-              <ul>
+                <li>Foundation</li>
                 <li>Modernizr</li>
                 <li>ScrollMagic</li>
                 <li>GSAP</li>
@@ -152,7 +144,6 @@
                 <li>Wordpress</li>
                 <li>Jekyll</li>
                 <li>Statamic</li>
-                <li>MS Office</li>
               </ul>
 
             </div>
@@ -166,6 +157,7 @@
                 <li>GIT & TFS</li>
                 <li>Amazon Web Services</li>
                 <li>Google Analytics & PPC Ads</li>
+                <li>Google Tag Manager</li>
                 <li>Monetate</li>
                 <li>Photoshop</li>
                 <li>InVision</li>
@@ -195,7 +187,9 @@
 
           <article>
               <div class="img">
+                <a href="http://8thnote.github.io/yeager/" target="_blank">
                   <img src="images/yeager.jpg" alt="Mike Yeager" />
+                </a>
               </div>
               <div class="text">
                   <h3>Mike Yeager - Pro Angler</h3>
@@ -206,7 +200,9 @@
           </article>
           <article>
               <div class="img">
+                <a href="http://8thnote.github.io/ministrycenter/" target="_blank">
                   <img src="images/ministry-center.jpg" alt="Ministry Center" />
+                </a>
               </div>
               <div class="text">
                   <h3>The Ministry Center</h3>
@@ -220,15 +216,17 @@
                   <img src="images/portfolio.jpg" alt="My Portfolio" />
               </div>
               <div class="text">
-                  <h3>My New Portfolio</h3>
-                  <p>I designed and developed my portfolio from scratch using a similar workflow as my other projects. It too is responsive, but I'll use Jekyll on the backend to simplify updating the content.
+                  <h3>My Portfolio</h3>
+                  <p>I designed and developed my portfolio from scratch using a similar workflow as my other projects. It too is responsive.
                   </p>
                   <p class="wrap"><b>You're on the site</b></p>
               </div>
           </article>
           <article>
               <div class="img">
+                <a href="http://tulsawebdesigners.biz/" target="_blank">
                   <img src="images/eighth-note.jpg" alt="Eighth Note Website" />
+                </a>
               </div>
               <div class="text">
                   <h3>Eighth Note Media</h3>
@@ -266,7 +264,7 @@
             <div>
               <label>
                 <span>Website:</span>
-                <input placeholder="Your website with http://" type="url" name="website">
+                <input placeholder="Your website" type="text" name="website">
               </label>
             </div>
             <div>
@@ -279,7 +277,7 @@
               <input type="text" name="_gotcha" style="display:none">
               <input type="hidden" name="_next" value="/thank-you.html">
               <input type="hidden" name="_subject" value="Hello from Helm Designs">
-              <button name="submit" type="submit" id="contact-submit" data-text="...Sending">Send Email</button>
+              <button name="submit" type="submit" id="contact-submit" data-text="...Sending">Send Message</button>
             </div>
           </form>
       </section><!-- contact -->
@@ -290,22 +288,11 @@
             <li><a href="https://twitter.com/8thnotemedia"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
             <li><a href="www.linkedin.com/in/donhelm"><svg class="icon icon-linkedin2"><use xlink:href="#icon-linkedin2"></use></svg></a></li>
           </ul>
-          <p>@2015 Helm Designs<span>.</span> <br />All rights reserved<span>.</span></p>
-          <p>I designed and developed this site from scratch :)</p>
+          <p>&copy;2004-2016 Helm Designs<span>.</span> <br />All rights reserved<span>.</span></p>
+          <p>I designed and hand coded this site :)</p>
         </div>
       </footer>
     </div>
-
-    <!-- Start of Async HubSpot Analytics Code -->
-      <script type="text/javascript">
-        (function(d,s,i,r) {
-          if (d.getElementById(i)){return;}
-          var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-          n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/547098.js';
-          e.parentNode.insertBefore(n, e);
-        })(document,"script","hs-analytics",300000);
-      </script>
-    <!-- End of Async HubSpot Analytics Code -->
 
     <!-- build:js({.tmp, app}) scripts/vendor.js -->
     <!-- bower:js -->
@@ -315,8 +302,9 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp, app}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/gsap-animation.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

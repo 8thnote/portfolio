@@ -24,10 +24,9 @@
 		}
 	}
 	h3 {
-		color: $blue;
+		color: #585858;
 		font-size: 1.3em;
 		font-weight: $bold;
-		text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 		@include deviceBreakpoint(small) {
 			margin-top: 0;
 		}
