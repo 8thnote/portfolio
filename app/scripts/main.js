@@ -101,16 +101,18 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		var currentScroll = $(this).scrollTop();
-		var $currentSection = {};
+		var $currentSection;
+		var sectionSet = false;
 
 		$sections.each(function(){
 			var divPosition = $(this).offset().top;
 
 			if ( divPosition - 1 < currentScroll ) {
 				$currentSection = $(this);
+				sectionSet = true;
 			}
 
-			if ($currentSection.length) {
+			if (sectionSet) {
 				var id = $currentSection.attr('id');
 				$('#mainNav a').removeClass('active');
 				$("#mainNav a[href=#"+id+"]").addClass('active'); 
