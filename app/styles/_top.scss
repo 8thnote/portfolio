@@ -222,6 +222,15 @@ header {
 
 	@include deviceBreakpoint(small) {
 		margin-top: 0;
+		width: 80%;
+	}
+
+	@include deviceBreakpoint(medium) {
+		width: 70%;
+	}
+
+	@include deviceBreakpoint(large) {
+		width: 57%;
 	}
 
 	&.cloak {
@@ -244,13 +253,21 @@ header {
 				}
 			}
 		}
+
+		br.lg-only {
+			display: none;
+
+			@include deviceBreakpoint(medium) {
+				display: block;
+			}
+		}
 	}
 }//topContent
 
 #topPhoto {
 	position: relative;
-	width: 60%;
-	padding-bottom: 60%;
+	width: 50%;
+	padding-bottom: 50%;
 	height: 0;
 	margin: 0 auto 1em auto;
 	background: url('../images/me-sprite.jpg') 50% 0 no-repeat;
@@ -260,8 +277,8 @@ header {
 	transition: .5s width, .5s padding;
 
 	@include deviceBreakpoint(small) {
-		width: 50%;
-		padding-bottom: 50%;
+		width: 40%;
+		padding-bottom: 40%;
 
 		&:before, &:after {
 			content: " ";
