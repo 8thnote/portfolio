@@ -2,7 +2,7 @@
 	position: relative;
 
 	@extend %flex-center;
-	background: url('../images/top-background-mobile.jpg') 50% 50% no-repeat;
+	background: url('../images/dallas-skyline.jpg') 50% 50% no-repeat;
 	background-size: cover;
 
 	@include deviceBreakpoint(mobile) {
@@ -10,7 +10,6 @@
 	}
 
 	@include deviceBreakpoint(small) {
-		background: url('../images/top-background.jpg') 50% 50% no-repeat;
 		margin-bottom: 10em;
 		background-attachment: fixed;
 
@@ -93,7 +92,7 @@ header {
 		a {
 			position: relative;
 			color: darken($light, 20);
-			
+
 			&:hover, &.active {
 				color: $light;
 			}
@@ -121,20 +120,20 @@ header {
 	}
 
 	h1 {
-		
+
 		display: none;//might want to !improve this
 		@include deviceBreakpoint(small) {
 			display: block;
 		}
-		
+
 		position: relative;
 		@include span(1 of 4);
-		margin: 0; padding: 0;
+		margin: 0; padding: 0.2em 0;
 		color: inherit;
-		font-size: 1.4em;
+		font-size: 1.2em;
 		font-weight: $lweight;
 		text-transform: lowercase;
-		
+
 		/*
 		img {
 			width: 100%;
@@ -167,8 +166,8 @@ header {
 			display: none;
 		}
 		float: right;
-		cursor: pointer; padding: 10px 35px 16px 0px; 
-		
+		cursor: pointer; padding: 10px 35px 16px 0px;
+
 		span, span:before, span:after {
 		  cursor: pointer;
 		  border-radius: 1px;
@@ -183,7 +182,7 @@ header {
 		}
 
 		span:before {
-		  top: -7px; 
+		  top: -7px;
 		}
 		span:after {
 		  bottom: -7px;
@@ -328,11 +327,11 @@ header {
 		}
 	}
 
-	
+
 		span {
 			text-shadow: .1em .1em .2em #000;//todo:change to var
 		}
-	
+
 
 	&:hover {
 		span {

@@ -1,26 +1,10 @@
 $(document).ready(function() {
 	"use strict";
 
-	function debounce(func, wait, immediate) {
-		var timeout;
-		return function() {
-			var context = this,
-				args = arguments;
-			var later = function() {
-				timeout = null;
-				if (!immediate) {func.apply(context, args);}
-			};
-			var callNow = immediate && !timeout;
-			clearTimeout(timeout);
-			timeout = setTimeout(later, wait);
-			if (callNow) {func.apply(context, args);}
-		};
-	} //debounce fn
- 
-    var initialized = false;
-    var myScene;
-    var topContent = $('#topContent');
-    
+  var initialized = false;
+  var myScene;
+  var topContent = $('#topContent');
+
 	var myResize = function() {
 	    var el = document.getElementById('mainWrap');
     	var fontPx = window.getComputedStyle(el, null).getPropertyValue('font-size');
@@ -37,7 +21,7 @@ $(document).ready(function() {
     		topContent.removeClass('cloak');
     		initialized = true;
     	}
-	    
+
 		if (!Modernizr.touch && layoutEmNum >= mobileBreakpoint) {
 			//desktop js
 			$('.fullheight-desktop').css('height', wheight);
@@ -53,23 +37,39 @@ $(document).ready(function() {
 	myResize();
 
 	var myResizeDebounced = debounce(myResize, 250);
-
 	window.addEventListener('resize', myResizeDebounced);
 
 
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this,
+        args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) {func.apply(context, args);}
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) {func.apply(context, args);}
+    };
+  } //debounce fn
+
+
 	//change header background
-    if (!Modernizr.touch) {
-        $(window).one('scroll', function() {
-            if ($(this).scrollTop() > 0) {
-                var controller = new ScrollMagic.Controller();
-                myScene = new ScrollMagic.Scene({
-                    triggerElement: "#topCta"
-                })
-                .setClassToggle("#top", "scrolled") // trigger a TweenMax.to tween
-                .addTo(controller);
-            }
-        });
-    }
+  if (!Modernizr.touch) {
+      $(window).one('scroll', function() {
+          if ($(this).scrollTop() > 0) {
+              var controller = new ScrollMagic.Controller();
+              myScene = new ScrollMagic.Scene({
+                  triggerElement: "#topCta"
+              })
+              .setClassToggle("#top", "scrolled") // trigger a TweenMax.to tween
+              .addTo(controller);
+          }
+      });
+  }
 
 	//smooth scrolling on page
 	$('a[href^="#"]').on('click',
@@ -115,7 +115,7 @@ $(document).ready(function() {
 			if (sectionSet) {
 				var id = $currentSection.attr('id');
 				$('#mainNav a').removeClass('active');
-				$("#mainNav a[href=#"+id+"]").addClass('active'); 
+				$("#mainNav a[href=#"+id+"]").addClass('active');
 			}
 		});
 

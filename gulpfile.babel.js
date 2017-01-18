@@ -1,9 +1,12 @@
 // generated on 2015-11-02 using generator-gulp-webapp 1.0.3
+// Note: this only builds properly with an older version of Node like 4.x
+// Todo: consider refactoring to use Brunch or Webpack
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import gutil from 'gulp-util';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -46,7 +49,7 @@ gulp.task('html', ['styles'], () => {
 
   return gulp.src('app/*.html')
     .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
+    .pipe($.if('*.js', $.uglify().on('error', gutil.log)))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
